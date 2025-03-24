@@ -1,11 +1,9 @@
-" Vim color file
+" Vim color file - Adjusted to match Molokai.yml
 "
-" Author: Tomas Restrepo <tomas@winterdom.com>
+" Original Author: Tomas Restrepo <tomas@winterdom.com>
 " https://github.com/tomasr/molokai
 "
-" Note: Based on the Monokai theme for TextMate
-" by Wimer Hazenberg and its darker variant
-" by Hamish Stuart Macpherson
+" Modified to match Molokai.yml specification
 "
 
 hi clear
@@ -26,130 +24,122 @@ else
     let s:molokai_original = 0
 endif
 
+" YML Colors:
+" color_01: '#1B1D1E'    # Black (Host)
+" color_02: '#7325FA'    # Red (Syntax string)
+" color_03: '#23E298'    # Green (Command)
+" color_04: '#60D4DF'    # Yellow (Command second)
+" color_05: '#D08010'    # Blue (Path)
+" color_06: '#FF0087'    # Magenta (Syntax var)
+" color_07: '#D0A843'    # Cyan (Prompt)
+" color_08: '#BBBBBB'    # White
 
-hi Boolean         guifg=#AE81FF
-hi Character       guifg=#E6DB74
-hi Number          guifg=#AE81FF
-hi String          guifg=#E6DB74
-hi Conditional     guifg=#F92672               gui=bold
-hi Constant        guifg=#AE81FF               gui=bold
-hi Cursor          guifg=#000000 guibg=#F8F8F0
-hi iCursor         guifg=#000000 guibg=#F8F8F0
+hi Boolean         guifg=#9D66F6               " Bright Red in YML
+hi Character       guifg=#7325FA               " Changed from yellow to purple (Red in YML)
+hi Number          guifg=#9D66F6               " Bright Red in YML
+hi String          guifg=#7325FA               " Changed from yellow to purple (Red in YML)
+hi Conditional     guifg=#FF0087               gui=bold " Magenta in YML
+hi Constant        guifg=#9D66F6               gui=bold " Bright Red in YML
+hi Cursor          guifg=#000000 guibg=#BBBBBB " Cursor color from YML
+hi iCursor         guifg=#000000 guibg=#BBBBBB " Matching cursor color
 hi Debug           guifg=#BCA3A3               gui=bold
-hi Define          guifg=#66D9EF
+hi Define          guifg=#60D4DF               " Yellow from YML
 hi Delimiter       guifg=#8F8F8F
 hi DiffAdd                       guibg=#13354A
 hi DiffChange      guifg=#89807D guibg=#4C4745
-hi DiffDelete      guifg=#960050 guibg=#1E0010
+hi DiffDelete      guifg=#FF0087 guibg=#1E0010 " Magenta from YML
 hi DiffText                      guibg=#4C4745 gui=italic,bold
 
-hi Directory       guifg=#A6E22E               gui=bold
-hi Error           guifg=#E6DB74 guibg=#1E0010
-hi ErrorMsg        guifg=#F92672 guibg=#232526 gui=bold
-hi Exception       guifg=#A6E22E               gui=bold
-hi Float           guifg=#AE81FF
-hi FoldColumn      guifg=#465457 guibg=#000000
-hi Folded          guifg=#465457 guibg=#000000
-hi Function        guifg=#A6E22E
-hi Identifier      guifg=#FD971F
-hi Ignore          guifg=#808080 guibg=bg
-hi IncSearch       guifg=#C4BE89 guibg=#000000
+hi Directory       guifg=#23E298               gui=bold " Green from YML
+hi Error           guifg=#7325FA guibg=#1E0010 " Red from YML
+hi ErrorMsg        guifg=#FF0087 guibg=#232526 gui=bold " Magenta from YML
+hi Exception       guifg=#23E298               gui=bold " Green from YML
+hi Float           guifg=#9D66F6               " Bright Red from YML
+hi FoldColumn      guifg=#555555 guibg=#1B1D1E " Bright Black and Background from YML
+hi Folded          guifg=#555555 guibg=#1B1D1E " Bright Black and Background from YML
+hi Function        guifg=#23E298               " Green from YML
+hi Identifier      guifg=#D08010               " Blue from YML
+hi Ignore          guifg=#555555 guibg=bg      " Bright Black from YML
+hi IncSearch       guifg=#60D4DF guibg=#000000 " Yellow from YML
 
-hi Keyword         guifg=#F92672               gui=bold
-hi Label           guifg=#E6DB74               gui=none
-hi Macro           guifg=#C4BE89               gui=italic
-hi SpecialKey      guifg=#66D9EF               gui=italic
+hi Keyword         guifg=#FF0087               gui=bold " Magenta from YML
+hi Label           guifg=#7325FA               gui=none " Red from YML
+hi Macro           guifg=#60D4DF               gui=italic " Yellow from YML
+hi SpecialKey      guifg=#60D4DF               gui=italic " Yellow from YML
 
-hi MatchParen      guifg=#000000 guibg=#FD971F gui=bold
-hi ModeMsg         guifg=#E6DB74
-hi MoreMsg         guifg=#E6DB74
-hi Operator        guifg=#F92672
+hi MatchParen      guifg=#000000 guibg=#D08010 gui=bold " Background/Blue from YML
+hi ModeMsg         guifg=#7325FA               " Red from YML
+hi MoreMsg         guifg=#7325FA               " Red from YML
+hi Operator        guifg=#FF0087               " Magenta from YML
 
 " complete menu
-hi Pmenu           guifg=#66D9EF guibg=#000000
-hi PmenuSel                      guibg=#808080
+hi Pmenu           guifg=#60D4DF guibg=#000000 " Yellow from YML
+hi PmenuSel                      guibg=#555555 " Bright Black from YML
 hi PmenuSbar                     guibg=#080808
-hi PmenuThumb      guifg=#66D9EF
+hi PmenuThumb      guifg=#60D4DF              " Yellow from YML
 
-hi PreCondit       guifg=#A6E22E               gui=bold
-hi PreProc         guifg=#A6E22E
-hi Question        guifg=#66D9EF
-hi Repeat          guifg=#F92672               gui=bold
-hi Search          guifg=#000000 guibg=#FFE792
+hi PreCondit       guifg=#23E298               gui=bold " Green from YML
+hi PreProc         guifg=#23E298               " Green from YML
+hi Question        guifg=#60D4DF               " Yellow from YML
+hi Repeat          guifg=#FF0087               gui=bold " Magenta from YML
+hi Search          guifg=#000000 guibg=#FFCE51 " Background/Bright Cyan from YML
 " marks
-hi SignColumn      guifg=#A6E22E guibg=#232526
-hi SpecialChar     guifg=#F92672               gui=bold
-hi SpecialComment  guifg=#7E8E91               gui=bold
-hi Special         guifg=#66D9EF guibg=bg      gui=italic
+hi SignColumn      guifg=#23E298 guibg=#232526 " Green from YML
+hi SpecialChar     guifg=#FF0087               gui=bold " Magenta from YML
+hi SpecialComment  guifg=#555555               gui=bold " Bright Black from YML
+hi Special         guifg=#60D4DF guibg=bg      gui=italic " Yellow from YML
 if has("spell")
-    hi SpellBad    guisp=#FF0000 gui=undercurl
-    hi SpellCap    guisp=#7070F0 gui=undercurl
-    hi SpellLocal  guisp=#70F0F0 gui=undercurl
-    hi SpellRare   guisp=#FFFFFF gui=undercurl
+    hi SpellBad    guisp=#FF0087 gui=undercurl " Magenta from YML
+    hi SpellCap    guisp=#D08010 gui=undercurl " Blue from YML
+    hi SpellLocal  guisp=#D0A843 gui=undercurl " Cyan from YML
+    hi SpellRare   guisp=#FFFFFF gui=undercurl " Bright White from YML
 endif
-hi Statement       guifg=#F92672               gui=bold
-hi StatusLine      guifg=#455354 guibg=fg
-hi StatusLineNC    guifg=#808080 guibg=#080808
-hi StorageClass    guifg=#FD971F               gui=italic
-hi Structure       guifg=#66D9EF
-hi Tag             guifg=#F92672               gui=italic
-hi Title           guifg=#ef5939
-hi Todo            guifg=#FFFFFF guibg=bg      gui=bold
+hi Statement       guifg=#FF0087               gui=bold " Magenta from YML
+hi StatusLine      guifg=#555555 guibg=#BBBBBB " Bright Black/White from YML
+hi StatusLineNC    guifg=#555555 guibg=#1B1D1E " Bright Black/Background from YML
+hi StorageClass    guifg=#D08010               gui=italic " Blue from YML
+hi Structure       guifg=#60D4DF               " Yellow from YML
+hi Tag             guifg=#FF0087               gui=italic " Magenta from YML
+hi Title           guifg=#FFAF00               " Bright Blue from YML
+hi Todo            guifg=#FFFFFF guibg=bg      gui=bold " Bright White from YML
 
-hi Typedef         guifg=#66D9EF
-hi Type            guifg=#66D9EF               gui=none
-hi Underlined      guifg=#808080               gui=underline
+hi Typedef         guifg=#60D4DF               " Yellow from YML
+hi Type            guifg=#60D4DF               gui=none " Yellow from YML
+hi Underlined      guifg=#555555               gui=underline " Bright Black from YML
 
-hi VertSplit       guifg=#808080 guibg=#080808 gui=bold
+hi VertSplit       guifg=#555555 guibg=#1B1D1E gui=bold " Bright Black/Background from YML
 hi VisualNOS                     guibg=#403D3D
 hi Visual                        guibg=#403D3D
-hi WarningMsg      guifg=#FFFFFF guibg=#333333 gui=bold
-hi WildMenu        guifg=#66D9EF guibg=#000000
+hi WarningMsg      guifg=#FFFFFF guibg=#555555 gui=bold " Bright White/Bright Black from YML
+hi WildMenu        guifg=#60D4DF guibg=#000000 " Yellow from YML
 
-hi TabLineFill     guifg=#1B1D1E guibg=#1B1D1E
-hi TabLine         guibg=#1B1D1E guifg=#808080 gui=none
+hi TabLineFill     guifg=#1B1D1E guibg=#1B1D1E " Background from YML
+hi TabLine         guibg=#1B1D1E guifg=#555555 gui=none " Background/Bright Black from YML
 
-if s:molokai_original == 1
-   hi Normal          guifg=#F8F8F2 guibg=#272822
-   hi Comment         guifg=#75715E
-   hi CursorLine                    guibg=#3E3D32
-   hi CursorLineNr    guifg=#FD971F               gui=none
-   hi CursorColumn                  guibg=#3E3D32
-   hi ColorColumn                   guibg=#3B3A32
-   hi LineNr          guifg=#BCBCBC guibg=#3B3A32
-   hi NonText         guifg=#75715E
-   hi SpecialKey      guifg=#75715E
-else
-   hi Normal          guifg=#F8F8F2 guibg=#1B1D1E
-   hi Comment         guifg=#7E8E91
-   hi CursorLine                    guibg=#293739
-   hi CursorLineNr    guifg=#FD971F               gui=none
-   hi CursorColumn                  guibg=#293739
-   hi ColorColumn                   guibg=#232526
-   hi LineNr          guifg=#465457 guibg=#232526
-   hi NonText         guifg=#465457
-   hi SpecialKey      guifg=#465457
-end
+" Main text and background colors
+hi Normal          guifg=#BBBBBB guibg=#1B1D1E " White/Background from YML
+hi Comment         guifg=#555555               " Bright Black from YML
+hi CursorLine                    guibg=#293739 " Slightly lighter than background
+hi CursorLineNr    guifg=#FFAF00               gui=none " Bright Blue from YML
+hi CursorColumn                  guibg=#293739 " Slightly lighter than background
+hi ColorColumn                   guibg=#232526 " Slightly lighter than background
+hi LineNr          guifg=#555555 guibg=#232526 " Bright Black from YML
+hi NonText         guifg=#555555               " Bright Black from YML
+hi SpecialKey      guifg=#555555               " Bright Black from YML
 
 "
 " Support for 256-color terminal
 "
 if &t_Co > 255
-   if s:molokai_original == 1
-      hi Normal                   ctermbg=234
-      hi CursorLine               ctermbg=235   cterm=none
-      hi CursorLineNr ctermfg=208               cterm=none
-   else
-      hi Normal       ctermfg=252 ctermbg=233
-      hi CursorLine               ctermbg=234   cterm=none
-      hi CursorLineNr ctermfg=208               cterm=none
-   endif
-   hi Boolean         ctermfg=135
-   hi Character       ctermfg=144
-   hi Number          ctermfg=135
-   hi String          ctermfg=144
+   hi Normal       ctermfg=252 ctermbg=233
+   hi CursorLine               ctermbg=234   cterm=none
+   hi CursorLineNr ctermfg=214               cterm=none
+   hi Boolean         ctermfg=141
+   hi Character       ctermfg=91
+   hi Number          ctermfg=141
+   hi String          ctermfg=91
    hi Conditional     ctermfg=161               cterm=bold
-   hi Constant        ctermfg=135               cterm=bold
+   hi Constant        ctermfg=141               cterm=bold
    hi Cursor          ctermfg=16  ctermbg=253
    hi Debug           ctermfg=225               cterm=bold
    hi Define          ctermfg=81
@@ -160,26 +150,26 @@ if &t_Co > 255
    hi DiffDelete      ctermfg=162 ctermbg=53
    hi DiffText                    ctermbg=102 cterm=bold
 
-   hi Directory       ctermfg=118               cterm=bold
-   hi Error           ctermfg=219 ctermbg=89
+   hi Directory       ctermfg=42                cterm=bold
+   hi Error           ctermfg=91  ctermbg=89
    hi ErrorMsg        ctermfg=199 ctermbg=16    cterm=bold
-   hi Exception       ctermfg=118               cterm=bold
-   hi Float           ctermfg=135
+   hi Exception       ctermfg=42                cterm=bold
+   hi Float           ctermfg=141
    hi FoldColumn      ctermfg=67  ctermbg=16
    hi Folded          ctermfg=67  ctermbg=16
-   hi Function        ctermfg=118
-   hi Identifier      ctermfg=208               cterm=none
+   hi Function        ctermfg=42
+   hi Identifier      ctermfg=172               cterm=none
    hi Ignore          ctermfg=244 ctermbg=232
-   hi IncSearch       ctermfg=193 ctermbg=16
+   hi IncSearch       ctermfg=81  ctermbg=16
 
    hi keyword         ctermfg=161               cterm=bold
-   hi Label           ctermfg=229               cterm=none
-   hi Macro           ctermfg=193
+   hi Label           ctermfg=91                cterm=none
+   hi Macro           ctermfg=81
    hi SpecialKey      ctermfg=81
 
-   hi MatchParen      ctermfg=233  ctermbg=208 cterm=bold
-   hi ModeMsg         ctermfg=229
-   hi MoreMsg         ctermfg=229
+   hi MatchParen      ctermfg=233  ctermbg=172 cterm=bold
+   hi ModeMsg         ctermfg=91
+   hi MoreMsg         ctermfg=91
    hi Operator        ctermfg=161
 
    " complete menu
@@ -188,14 +178,14 @@ if &t_Co > 255
    hi PmenuSbar                   ctermbg=232
    hi PmenuThumb      ctermfg=81
 
-   hi PreCondit       ctermfg=118               cterm=bold
-   hi PreProc         ctermfg=118
+   hi PreCondit       ctermfg=42                cterm=bold
+   hi PreProc         ctermfg=42
    hi Question        ctermfg=81
    hi Repeat          ctermfg=161               cterm=bold
    hi Search          ctermfg=0   ctermbg=222   cterm=NONE
 
    " marks column
-   hi SignColumn      ctermfg=118 ctermbg=235
+   hi SignColumn      ctermfg=42  ctermbg=235
    hi SpecialChar     ctermfg=161               cterm=bold
    hi SpecialComment  ctermfg=245               cterm=bold
    hi Special         ctermfg=81
@@ -208,10 +198,10 @@ if &t_Co > 255
    hi Statement       ctermfg=161               cterm=bold
    hi StatusLine      ctermfg=238 ctermbg=253
    hi StatusLineNC    ctermfg=244 ctermbg=232
-   hi StorageClass    ctermfg=208
+   hi StorageClass    ctermfg=172
    hi Structure       ctermfg=81
    hi Tag             ctermfg=161
-   hi Title           ctermfg=166
+   hi Title           ctermfg=214
    hi Todo            ctermfg=231 ctermbg=232   cterm=bold
 
    hi Typedef         ctermfg=81
@@ -231,44 +221,6 @@ if &t_Co > 255
    hi NonText         ctermfg=59
 
    hi SpecialKey      ctermfg=59
-
-   if exists("g:rehash256") && g:rehash256 == 1
-       hi Normal       ctermfg=252 ctermbg=234
-       hi CursorLine               ctermbg=236   cterm=none
-       hi CursorLineNr ctermfg=208               cterm=none
-
-       hi Boolean         ctermfg=141
-       hi Character       ctermfg=222
-       hi Number          ctermfg=141
-       hi String          ctermfg=222
-       hi Conditional     ctermfg=197               cterm=bold
-       hi Constant        ctermfg=141               cterm=bold
-
-       hi DiffDelete      ctermfg=125 ctermbg=233
-
-       hi Directory       ctermfg=154               cterm=bold
-       hi Error           ctermfg=222 ctermbg=233
-       hi Exception       ctermfg=154               cterm=bold
-       hi Float           ctermfg=141
-       hi Function        ctermfg=154
-       hi Identifier      ctermfg=208
-
-       hi Keyword         ctermfg=197               cterm=bold
-       hi Operator        ctermfg=197
-       hi PreCondit       ctermfg=154               cterm=bold
-       hi PreProc         ctermfg=154
-       hi Repeat          ctermfg=197               cterm=bold
-
-       hi Statement       ctermfg=197               cterm=bold
-       hi Tag             ctermfg=197
-       hi Title           ctermfg=203
-       hi Visual                      ctermbg=238
-
-       hi Comment         ctermfg=244
-       hi LineNr          ctermfg=239 ctermbg=235
-       hi NonText         ctermfg=239
-       hi SpecialKey      ctermfg=239
-   endif
 end
 
 " Must be at the end, because of ctermbg=234 bug.
